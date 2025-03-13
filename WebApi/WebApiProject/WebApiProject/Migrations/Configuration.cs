@@ -18,10 +18,10 @@
             //先將產品的預設資料寫入
             context.Products.AddOrUpdate(
                 p => p.ProductId,
-                new Product { ProductId = 1, Name = "商品A" },
-                new Product { ProductId = 2, Name = "商品B" },
-                new Product { ProductId = 3, Name = "商品C" },
-                new Product { ProductId = 4, Name = "商品D" }
+                new Product { ProductId = 1, Name = "商品A", Price = 100 },
+                new Product { ProductId = 2, Name = "商品B", Price = 200 },
+                new Product { ProductId = 3, Name = "商品C", Price = 300 },
+                new Product { ProductId = 4, Name = "商品D", Price = 400 }
             );
         }
     }
