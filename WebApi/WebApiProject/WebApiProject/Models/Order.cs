@@ -12,6 +12,6 @@ namespace WebApiProject.Models
         public int ProductId { get; set; }
         public DateTime OrderDate { get; set; }
 
-        public virtual Product Product { get; set; }
+        public virtual ProductInfo ProductInfo { get; set; }
     }
 }

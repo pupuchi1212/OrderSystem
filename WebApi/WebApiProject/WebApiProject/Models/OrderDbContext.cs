@@ -10,7 +10,7 @@ namespace WebApiProject.Models
     {
         public OrderDbContext() : base("OrderDbContext") { }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductInfo> ProductInfo { get; set; }
         public DbSet<Order> Orders { get; set; }
     }
 }

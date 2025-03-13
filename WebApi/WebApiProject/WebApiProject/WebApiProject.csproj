@@ -171,11 +171,17 @@
     <Compile Include="Migrations\202503130806497_InitialCreate.designer.cs">
       <DependentUpon>202503130806497_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202503130907495_update1.cs" />
+    <Compile Include="Migrations\202503130907495_update1.designer.cs">
+      <DependentUpon>202503130907495_update1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDbContext.cs" />
-    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Product\IProductService.cs" />
+    <Compile Include="Services\Product\ProductService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -229,6 +235,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Api\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -263,6 +270,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202503130806497_InitialCreate.resx">
       <DependentUpon>202503130806497_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503130907495_update1.resx">
+      <DependentUpon>202503130907495_update1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
