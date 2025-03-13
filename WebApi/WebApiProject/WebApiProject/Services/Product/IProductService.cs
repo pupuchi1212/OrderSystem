@@ -8,7 +8,7 @@ using WebApiProject.Models;
 
 namespace WebApiProject.Services.Product
 {
-    interface IProductService
+    public interface IProductService
     {
         /// <summary>
         /// 取得所有產品資訊
