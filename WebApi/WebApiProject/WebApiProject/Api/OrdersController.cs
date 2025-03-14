@@ -59,6 +59,7 @@ namespace WebApiProject.Api
         /// <summary>
         /// 刪除
         /// </summary>
+        [HttpDelete]
         public HttpResponseMessage Delete(int id)
         {
             _orderService.Delete(id);
