@@ -11,6 +11,7 @@ namespace WebApiProject.Models
         public OrderDbContext() : base("OrderDbContext") { }
 
         public DbSet<ProductInfo> ProductInfo { get; set; }
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderInfo> OrderInfo { get; set; }
+        public DbSet<OrderDetail> OrderDetail { get; set; }
     }
 }

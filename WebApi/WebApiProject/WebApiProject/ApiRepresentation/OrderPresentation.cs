@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WebApiProject.Models;
 
-namespace WebApiProject.Models
+namespace WebApiProject.ApiRepresentation
 {
-    public class Order
+    public class OrderPresentation
     {
         public int OrderId { get; set; }
         public int UserId { get; set; }
-        public int ProductId { get; set; }
         public DateTime OrderDate { get; set; }
-
-        public virtual ProductInfo ProductInfo { get; set; }
+        public List<OrderDetail> OrderDetails { get; set; }
     }
 }

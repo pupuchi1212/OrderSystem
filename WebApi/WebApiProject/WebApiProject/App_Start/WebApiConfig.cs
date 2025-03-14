@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Web.Http;
 using WebApiProject.Models;
+using WebApiProject.Services.Order;
 using WebApiProject.Services.Product;
 
 namespace WebApiProject
@@ -26,6 +27,10 @@ namespace WebApiProject
             // 註冊 Service 及 Interface
             builder.RegisterType<ProductService>()
                    .As<IProductService>()
+                   .InstancePerRequest();
+
+            builder.RegisterType<OrderService>()
+                   .As<IOrderService>()
                    .InstancePerRequest();
 
             // 建立 Autofac 容器
