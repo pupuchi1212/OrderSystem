@@ -27,25 +27,41 @@ namespace WebApiProject.Api
             return Ok(_productService.GetAllProducts());
         }
 
-        //// GET api/<controller>/5
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+        /// <summary>
+        /// 取得產品詳細資訊
+        /// </summary>
+        [HttpGet]
+        public IHttpActionResult Get(int id)
+        {
+            return Ok(_productService.GetProduct(id));
+        }
 
-        //// POST api/<controller>
-        //public void Post([FromBody] string value)
-        //{
-        //}
+        /// <summary>
+        /// 新增
+        /// </summary>
+        [HttpPost]
+        public IHttpActionResult Post([FromBody] ProductInfo ProData)
+        {
+            return Ok(_productService.Add(ProData));
+        }
 
-        //// PUT api/<controller>/5
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
+        /// <summary>
+        /// 編輯
+        /// </summary>
+        [HttpPut]
+        public HttpResponseMessage Put(int id, [FromBody] ProductInfo ProData)
+        {
+            _productService.Edit(id, ProData);
+            return new HttpResponseMessage(System.Net.HttpStatusCode.OK);
+        }
 
-        //// DELETE api/<controller>/5
-        //public void Delete(int id)
-        //{
-        //}
+        /// <summary>
+        /// 刪除
+        /// </summary>
+        public HttpResponseMessage Delete(int id)
+        {
+            _productService.Delete(id);
+            return new HttpResponseMessage(System.Net.HttpStatusCode.NoContent);
+        }
     }
 }
